@@ -1,0 +1,12 @@
+*.db
+*.conf
+*.tags
+*.administrator
+*.mk
+*.project
+*.txt
+*.workspace
+*.d
+*.exe
+*.o
+Makefile
