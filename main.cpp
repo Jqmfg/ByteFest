@@ -16,8 +16,10 @@ int main(int argc, char** argv) {
 	int numTrades = 0;
 	bool turnTime = true;
 	//temporary values
-	startingValue = 12849;
-	tradingValues.push_back(1);
+//	startingValue = 12849;
+//	tradingValues.push_back(1);
+	
+	
 	
 	std::sort(tradingValues.begin(), tradingValues.end(), sortHighLow);
 	currentItems.push_back(startingValue);
