@@ -19,7 +19,11 @@ int main(int argc, char** argv) {
 //	startingValue = 12849;
 //	tradingValues.push_back(1);
 	
-	
+	//file input
+	ifstream myStream("trading_post.in");
+	if(!input.is_open())
+		std::cout << "Couldn't find the file" << std::endl;
+		std::cout << "Please place the file in the same directory as the executable" << std::endl;
 	
 	std::sort(tradingValues.begin(), tradingValues.end(), sortHighLow);
 	currentItems.push_back(startingValue);
@@ -38,4 +42,5 @@ int main(int argc, char** argv) {
 		currentItems.erase(currentItems.begin());
 	}
 	std::cout << numTrades;
+	std::getline();
 }
