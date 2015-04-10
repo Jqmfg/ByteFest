@@ -3,6 +3,7 @@
 #include <iterator>
 #include <algorithm>
 #include <string>
+#include <fstream>
 
 bool sortHighLow(int i, int j) {
 	return j < i;
@@ -15,15 +16,24 @@ int main(int argc, char** argv) {
 	int currentValue;
 	int numTrades = 0;
 	bool turnTime = true;
+	int numTests;
+	std::string numTestsString;
 	//temporary values
 //	startingValue = 12849;
 //	tradingValues.push_back(1);
 	
 	//file input
-	ifstream myStream("trading_post.in");
-	if(!input.is_open())
+	std::ifstream tradingPost("trading_post.in");
+	if(!tradingPost.is_open()) {
 		std::cout << "Couldn't find the file" << std::endl;
 		std::cout << "Please place the file in the same directory as the executable" << std::endl;
+	}
+	else {
+		std::string tmp;
+		tradingPost.getline()
+		
+	}
+	
 	
 	std::sort(tradingValues.begin(), tradingValues.end(), sortHighLow);
 	currentItems.push_back(startingValue);
@@ -42,5 +52,5 @@ int main(int argc, char** argv) {
 		currentItems.erase(currentItems.begin());
 	}
 	std::cout << numTrades;
-	std::getline();
+	std::cin.get();
 }
