@@ -30,7 +30,7 @@ int main(int argc, char** argv) {
 	}
 	else {
 		std::string tmp;
-		tradingPost.getline()
+		tradingPost.getline();
 		
 	}
 	
